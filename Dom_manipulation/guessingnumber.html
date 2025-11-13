@@ -7,26 +7,31 @@
 <br>
 <br>
 <p id="result" > Yours Result</p>
+<p id="score"> Totalscore:10</p>
 <button onClick="check()">
     Check
 </button>
 <script>
 var getvalue= document.getElementById("getvalue")
-
+var score= document.getElementById("score")
 var result= document.getElementById("result")
-
+var Totalscore=10
 function check() {
     var randomNum= Math.floor(Math.random() *10)+1
     var enterednum= parseInt(getvalue.value) 
+    
     if(randomNum == enterednum) 
     {
         console.log("You got it")
         result.textContent="Right"
+        
         //alert("Congrats your guess is correct")
     }
     else {
+        Totalscore= Totalscore-1
         console.log("you are wrong")
         result.textContent="wrong"
+        score.textContent="score:"+Totalscore
     }
 
 

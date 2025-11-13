@@ -12,11 +12,12 @@
 </button>
 <script>
 var getvalue= document.getElementById("getvalue")
-var randomNum= Math.floor(Math.random()+1)
+
 var result= document.getElementById("result")
 
 function check() {
-    var enterednum= getvalue.value 
+    var randomNum= Math.floor(Math.random() *10)+1
+    var enterednum= parseInt(getvalue.value) 
     if(randomNum == enterednum) 
     {
         console.log("You got it")
@@ -25,6 +26,7 @@ function check() {
     }
     else {
         console.log("you are wrong")
+        result.textContent="wrong"
     }
 
 

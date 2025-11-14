@@ -1,15 +1,11 @@
 <h1 id="heading"> Name</h1>
-<button onClick="aishu()">Aishu</button>
-<button onClick="pappu()">Pappu</button>
+<button onClick="update(event)">Aishu</button>
+<button onClick="update(event)">Pappu</button>
 <script>
-    var heading = document.getElementById("heading")
-    function aishu(){
-        heading.textContent="Aishu"
+    var h1 = document.getElementById("heading")
+    function update(event){
+        h1.textContent=event.target.textContent
         console.log("clicked")
-
-    }
-    function pappu(){
-        heading.textContent="Pappu"
 
     }
 

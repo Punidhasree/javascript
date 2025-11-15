@@ -1,0 +1,44 @@
+<style>
+    .overlay{
+        background-color: black ;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        opacity:0.8;
+        z-index:1;
+        display:none;
+    }
+    .popupbox{
+        position:absolute;
+        z-index:3;
+        background-color: white ;
+        color: black;
+        width: 30%;
+        padding: 20px;
+        border-radius:10px;
+        left:30%;
+        top:60px;
+        display:none;
+    }
+</style>
+<button onClick="start()"> start</button>
+<div class="overlay"> </div>
+<div class="popupbox">
+    <p> The popup is showing as per your request.Kindly close it after reading it</p>
+    <button onClick="stop()"> stop</button>
+</div>
+<script>
+var popoverlay= document.querySelector(".overlay")
+var popupbox=document.querySelector(".popupbox")
+function start(){
+    popupbox.style.display="block"
+    popoverlay.style.display="block"
+
+}
+function stop(){
+    popupbox.style.display="none"
+    popoverlay.style.display="none"
+
+}
